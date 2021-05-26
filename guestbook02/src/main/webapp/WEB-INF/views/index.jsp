@@ -11,7 +11,8 @@
 <title>방명록</title>
 </head>
 <body>
-	<form action="<%=request.getContextPath() %>/gbc?gb=add" method="post">
+	<form action="<%=request.getContextPath() %>/gbc" method="post">
+	<input type='hidden' name="gb" value="add">
 	<table border=1 width=500>
 		<tr>
 			<td>이름</td><td><input type="text" name="name"></td>
