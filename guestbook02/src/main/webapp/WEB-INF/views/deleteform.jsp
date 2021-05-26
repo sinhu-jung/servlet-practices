@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%
-String number = request.getParameter("no");
-Long no = Long.parseLong(number);
+	String number = (String)request.getAttribute("no");
+	Long no = Long.parseLong(number);
 %>
 <html>
 <head>
@@ -9,7 +9,7 @@ Long no = Long.parseLong(number);
 <title>방명록</title>
 </head>
 <body>
-	<form method="post" action="<%=request.getContextPath()%>/delete.jsp">
+	<form method="post" action="<%=request.getContextPath()%>/gbc?gb=delete">
 		<input type='hidden' name="no" value="<%=no%>">
 		<table>
 			<tr>
